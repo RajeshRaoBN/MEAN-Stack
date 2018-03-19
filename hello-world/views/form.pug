@@ -1,0 +1,26 @@
+html
+head
+    title Form Tester
+body
+    form(action = "/", method = "POST")
+        div
+            label(for = "name") Name:
+            input(name = "name")
+        br
+        div
+            label(for = "age") Age:
+            input(name = "age")
+        br
+        div
+            label(for = "nationality") Nationality:
+            input(name = "nationality")
+        br
+        div
+            label(for = "say") Say:
+            input(name = "say" value = "Hi")
+        br
+        div
+            label(for = "to") To:
+            input(name = "to" value = "Express forms")
+        br
+        button(type = "submit") Send my greetings
