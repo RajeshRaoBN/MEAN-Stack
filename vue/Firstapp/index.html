@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Product App</title>
+    </head>
+    <body>
+        <div id="root">
+            <div>
+              <h1>
+                {{ greeting }}
+                <input v-model="greeting">
+              </h1>
+            </div> 
+            <div v-if="count === 0">
+              <p>
+                Green
+              </p>
+            </div>
+            <div v-else-if="count === 1">
+              <p>
+                Blue
+              </p>
+            </div>
+            <div v-else>
+              <p>
+                Gray
+              </p>
+            </div>
+            <div>
+              Sign Up:<br>
+              <input v-model = "email">
+              <button onClick = "alert('Signed Up')">
+                Submit
+              </button>
+              
+            </div>
+          </div>
+    </body>
+</html>

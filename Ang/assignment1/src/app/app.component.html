@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  <input type="text" placeholder="Server Name" [(ngModel)]="ServerName">
+  <input type="text" placeholder="Server Name" [ngModel]="ServerName">
+  <h2>Input Server Information</h2>
+  <p>{{ServerName}}</p>
+  <h2>Server name {{ServerName}} with pid {{ServerPID}} is {{ServerStatus}} </h2>
+  <button [disabled]="buttonState" (click)="toggleServerStatus()">Toggle Server Status</button>
+</div>
+<div>
+  <input type="text" placeholder="First Name" [(ngModel)]="firstName" (input)="enableButton()"><br>
+  <label>     First Name: {{firstName}}     </label><br>
+  <button [disabled]="emptyName()" (click)="emptyFirstName()">Reset first Name</button>
+</div>
+<div>
+  <h1 [ngStyle]="{color: getColor()}"> This is an example of ngif </h1>
+  <h2 [ngClass]="{'white': getColor()}"> This is just an example of ngclass</h2>
+  <p *ngIf="flag; else elseblock"> Flag is True</p>
+  <ng-template #elseblock>
+    <p> Flag is false</p>
+  </ng-template>
+  <button (click)="toggleFlag()"> Toggle Flag</button>
+</div>
+<div>
+  <h1>Student Roster</h1>
+
+  <input type="text" placeholder="name" [(ngModel)]="currentName">
+  <button (click)="add()">Submit Student</button>
+
+  <li *ngFor="let name of studentRoster">{{name}}</li>
+</div>
+<div>
+  <p *ngIf="paragraph; else elseblock">This is a paragraph one that will toggle</p>
+  <ng-template #elseblock>
+    <p>This is the second paragraph one that toggles back</p>
+  </ng-template>
+  <button (click)="toggleParagraph()" [ngStyle]="{color: getBtnColor()}">Toggle Paragraph</button>
+  <label>No of clicks: {{noClicks}}</label>
+</div>
