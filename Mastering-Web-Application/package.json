@@ -10,7 +10,7 @@
   "author": "Alexandru Vladutu <alexandru.vladutu@gmail.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "async": "^0.2.10",
+    "async": "^2.6.4",
     "body-parser": "^1.4.3",
     "connect-flash": "^0.1.1",
     "connect-multiparty": "^1.0.6",
